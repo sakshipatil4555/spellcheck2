@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h2>Extracted Text</h2>
+    <pre>{{ text }}</pre>
+
+    <h2>Spelling Mistakes</h2>
+    {% if mistakes %}
+        <ul>
+            {% for word in mistakes %}
+                <li>{{ word }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No spelling mistakes found!</p>
+    {% endif %}
+    
+    <a href="/">Go Back</a>
+</body>
+</html>
